@@ -1,17 +1,16 @@
 // == Import
-import { ThemeProvider} from '@mui/material/styles';
+import { Box } from '@mui/material'
 import theme from '../../selectors/Theme'
 // == Composant
-function App() {
+function NavBar() {
   return (
-    <ThemeProvider theme={theme}>
 
-      <h1>Composant : App</h1>
-
-    </ThemeProvider>
+   <Box>
+      <h1>Composant : NavBar</h1>
+   </Box>
 
   );
 }
 
 // == Export
-export default App;
+export default NavBar;

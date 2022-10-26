@@ -2,16 +2,15 @@
 import { Box } from '@mui/material'
 import theme from '../../selectors/Theme'
 // == Composant
-function Header() {
+function Home() {
   return (
-    <Box>
 
-      <h1>Composant : Header</h1>
-
-    </Box>
+   <Box>
+      <h1>Composant : NavBar</h1>
+   </Box>
 
   );
 }
 
 // == Export
-export default Header;
+export default Home;
