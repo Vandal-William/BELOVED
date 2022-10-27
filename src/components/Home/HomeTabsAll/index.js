@@ -18,7 +18,7 @@ function HomeTabsAll() {
         image={product.image}
         name={product.name}
         price={product.price}
-        tag={product.tags.name}
+        tags={product.tags}
 
       />
      ))}
