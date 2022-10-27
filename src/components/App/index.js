@@ -1,25 +1,19 @@
 // == Import
 import { ThemeProvider} from '@mui/material/styles';
-import { Container } from '@mui/material'
 import theme from '../../selectors/Theme'
 import { Route, Routes } from 'react-router-dom';
-import Header from '../Header';
 import NavBar from '../NavBar';
+import Home from '../Home';
 // == Composant
 function App() {
   return (
     <ThemeProvider theme={theme}>
 
       <NavBar />
-      <Header />
-
-      <Container>
-
         <Routes>
-          <Route />
+          <Route path='/' element={<Home />} />
         </Routes>
         
-      </Container>
 
     </ThemeProvider>
 

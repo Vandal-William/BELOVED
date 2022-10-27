@@ -1,4 +1,9 @@
+import data from '../data/tabsData'
+
+
 const initialState = {
+  products: data,
+  tabs: 0,
 
 };
 
@@ -11,10 +16,10 @@ function reducer(state = initialState, action = {}) {
         // la notation entre crochet me permet de spécifier
         // via une expression le nom de la propriété cliblée
       };
-    case 'INSTRUCTION':
+    case 'SHOW_NEW_SECTION':
       return {
-        ...state, // déverse le contenue du state
-        // le ou les state qui change
+        ...state,
+        tabs: action.tabs
       };
     default:
       return state;
