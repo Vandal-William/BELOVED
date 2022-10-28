@@ -1,9 +1,6 @@
 // == Import
-import { AppBar, Box, Typography } from '@mui/material'
-import { Link } from 'react-router-dom';
-import theme from '../../../selectors/Theme'
-import Product from './Product';
-import image from '../../../asset/products/product01.jpeg'
+import { Box } from '@mui/material'
+import DarkProduct from './DarkProduct';
 import { useSelector } from 'react-redux';
 // == Composant
 function HomeTabsDark() {
@@ -14,12 +11,13 @@ function HomeTabsDark() {
    
    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2rem'}}>
      {dark.map(product => (
-      <Product 
+      <DarkProduct 
         key={product.id}
         image={product.image}
         name={product.name}
         price={product.price}
-        tag={product.tags.name}
+        tags={product.tags}
+        id={product.id}
       />
      ))}
    </Box>

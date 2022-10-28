@@ -9,13 +9,13 @@ import { bgcolor, padding } from '@mui/system';
 import { useSelector } from 'react-redux';
 
 // == Composant
-function Product({image, name, price, tags}) {
+function TechProduct({image, name, price, tags, id}) {
   const data = useSelector(state => state.product)
   return (
    
      
         
-  <Box sx={{width: '20%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+  <Box component={Link} to={`/product/${id}`} sx={{width: '20%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
     <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '30rem'}}>
     <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -25,8 +25,8 @@ function Product({image, name, price, tags}) {
           <Chip 
             key={tag.id}
             label={tag.name}
-            sx={{width: '40%', padding : '1rem', margin: '1rem'}}
-            backgroundColor= {tag.name !== 'Trending' && (lightBlue)}
+            sx={{width: '40%', padding : '1rem', margin: '1rem',  backgroundColor: 'lightBlue'}}
+           
           />
       ))}
     
@@ -37,7 +37,7 @@ function Product({image, name, price, tags}) {
           <Typography sx={{fontWeight: 'bold', fontSize: '1.3rem', color: 'white', textShadow: '0.1rem 0.1rem 0.2rem black'}}> {name} </Typography>
           <Typography sx={{fontSize: '1rem', color: '#eaeaea', textShadow: '0.1rem 0.1rem 0.2rem black'}}> NFT ART </Typography>
         </Box>
-        <Typography sx={{fontWeight: 'bold', fontSize: '1rem', color: '#eaeaea', textShadow: '0.1rem 0.1rem 0.2rem black', alignSelf: 'end'}}> {price} € </Typography>
+        <Typography sx={{fontWeight: 'bold', fontSize: '1rem', color: '#eaeaea', textShadow: '0.1rem 0.1rem 0.2rem black', alignSelf: 'end'}}> {price} ETH </Typography>
       </Box>
    
     </Box>
@@ -49,4 +49,4 @@ function Product({image, name, price, tags}) {
 }
 
 // == Export
-export default Product;
+export default TechProduct;

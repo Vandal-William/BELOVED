@@ -30,7 +30,7 @@ export default function HomeTabs() {
         <Tab sx={{color: 'rgb(234, 234, 234, 0.3)', border: '0.1px solid rgb(234, 234, 234, 0.4)', borderRadius: '10%', marginRight: '1rem'}} label="All" />
         <Tab sx={{color: 'rgb(234, 234, 234, 0.3)', border: '0.1px solid rgb(234, 234, 234, 0.4)', borderRadius: '10%', marginRight: '1rem'}} label="NEON" />
         <Tab sx={{color: 'rgb(234, 234, 234, 0.3)', border: '0.1px solid rgb(234, 234, 234, 0.4)', borderRadius: '10%', marginRight: '1rem'}} label="DARK" />
-        <Tab sx={{color: 'rgb(234, 234, 234, 0.3)', border: '0.1px solid rgb(234, 234, 234, 0.4)', borderRadius: '10%', marginRight: '1rem'}} label="MODERNE-THEC" />
+        <Tab sx={{color: 'rgb(234, 234, 234, 0.3)', border: '0.1px solid rgb(234, 234, 234, 0.4)', borderRadius: '10%', marginRight: '1rem'}} label="MODERN-TECH" />
       </Tabs>
     </Box>
   );
