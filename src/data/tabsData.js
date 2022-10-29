@@ -28,15 +28,13 @@ import baner07 from '../asset/banner/baner07.png'
 import baner08 from '../asset/banner/baner08.jpg'
 import baner09 from '../asset/banner/baner09.png'
 
-const users = [
-    
-]
 
 const data = [
     {
         "id": 1,
         "name": "Black Maria Style",
         "image": product01,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 0.1,
         "tags": [
             {
@@ -59,6 +57,7 @@ const data = [
         "id": 2,
         "name": "Pinky Metallium",
         "image": product02,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 0.99,
         "tags": [
             {
@@ -81,6 +80,7 @@ const data = [
         "id": 3,
         "name": "Neo Violet",
         "image": product03,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 0.06,
         "tags": [
             {
@@ -102,6 +102,7 @@ const data = [
         "id": 4,
         "name": "Neo Violet",
         "image": product04,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 0.09 ,
         "tags": [
             {
@@ -123,6 +124,7 @@ const data = [
         "id": 5,
         "name": "Neo Violet",
         "image": product05,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 1.66,
         "tags": [
             {
@@ -144,6 +146,7 @@ const data = [
         "id": 6,
         "name": "Neo Violet",
         "image": product06,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 1.20,
         "tags": [
             {
@@ -165,6 +168,7 @@ const data = [
         "id": 7,
         "name": "Neo Violet",
         "image": product07,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 0.66,
         "tags": [
             {
@@ -186,6 +190,7 @@ const data = [
         "id": 8,
         "name": "Neo Violet",
         "image": product08,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 1.66,
         "tags": [
             {
@@ -207,6 +212,7 @@ const data = [
         "id": 9,
         "name": "Neo Violet",
         "image": product09,
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.",
         "price": 2.06,
         "tags": [
             {

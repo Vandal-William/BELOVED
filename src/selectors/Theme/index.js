@@ -23,6 +23,16 @@ const theme = createTheme({
                     
                 }
             }
+        },
+        MuiButton: {
+            defaultProps: {
+                variant: 'contained'
+            },
+            styleOverrides: {
+                root:{
+                   
+                }
+            }
         }
     }
 });

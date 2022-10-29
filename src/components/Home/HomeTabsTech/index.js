@@ -1,9 +1,6 @@
 // == Import
-import { AppBar, Box, Typography } from '@mui/material'
-import { Link } from 'react-router-dom';
-import theme from '../../../selectors/Theme'
+import { Box } from '@mui/material'
 import TechProduct from './TechProduct';
-import image from '../../../asset/products/product01.jpeg'
 import { useSelector } from 'react-redux';
 // == Composant
 function HomeTabsVintage() {

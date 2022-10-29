@@ -1,8 +1,7 @@
 // == Import
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import UserNfts from '../UserNfts';
 
 // == Composant
 function OneProduct() {
@@ -17,41 +16,32 @@ function OneProduct() {
 
   return (
 
-    <Box >
-     <Box 
-        sx={{
-          backgroundImage: `url(${products.author.banner})`, 
-          width: '100%', 
-          height: '50vh', 
-          backgroundSize: 'cover', 
-          backgroundColor: 'black', 
-          backgroundPosition: 'center',
-          marginTop: '7rem'
-
-          }}  
-
-          />
-
+    <Box sx={{margin: '10rem'}}>
+      <Box sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
         <Box 
           sx={{
-            backgroundImage: `url(${products.author.photo})`, 
-            width: '20%', 
-            height: '40vh', 
+            backgroundImage: `url(${products.image})`, 
+            width: '30%', 
+            height: '45rem', 
             backgroundSize: 'cover', 
             backgroundColor: 'black', 
             backgroundPosition: 'center',
-            position: 'absolute',
-            top: '350px',
-            left: '100px',
-            borderRadius: '5rem',
-            border: '1rem solid white' 
-            }} 
-            />
-            <Typography variant='h1' color='white' fontWeight='bold' sx={{marginLeft: '500px', marginTop: '1.5rem'}}> {products.author.name} </Typography>
-            <Typography variant='body1' color='white' sx={{paddingTop: '7rem', paddingBottom: '7rem', paddingLeft: '20rem', paddingRight: '20rem', fontSize: '2rem', textAlign: 'center'}}> {products.author.story} </Typography>
-            <Typography variant='h2' color='white' fontWeight='bold' sx={{marginLeft: '100px'}}> Collections </Typography>
-            <UserNfts/>
+          }}  
+        />
+        <Box sx={{width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+          <Typography variant='h1' color='white' fontWeight='bold' sx={{textAlign: 'end'}}> {products.name} </Typography>
+          <Typography variant='h2' color='white' fontWeight='bold' sx={{textAlign: 'end'}}> {products.author.name} </Typography>
+          <Typography color='white' sx={{fontSize: '1.3rem', marginTop: '5rem', textAlign: 'justify'}}> {products.description} </Typography>
+
+          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'end', gap: '2rem', marginTop: '5rem'}}>
+          <Typography color='white' sx={{fontSize: '1.3em'}}> {products.price} ETH </Typography>
+          <Button sx={{fontSize: '1.3em'}}>BUY</Button>
+          </Box>
+
+        </Box>
+
       </Box>
+    </Box>
 
      
 

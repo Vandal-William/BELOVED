@@ -1,11 +1,6 @@
 // == Import
-import { AppBar, Box, Card, Chip, Typography } from '@mui/material'
-import { lightBlue} from '@mui/material/colors';
-import {green} from '@mui/material/colors';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { Box, Chip, Typography } from '@mui/material'
 import { Link } from 'react-router-dom';
-import theme from '../../../../selectors/Theme'
-import { bgcolor, padding } from '@mui/system';
 import { useSelector } from 'react-redux';
 
 // == Composant

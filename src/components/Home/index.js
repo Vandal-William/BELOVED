@@ -1,6 +1,5 @@
 // == Import
-import { Box, Grid } from '@mui/material'
-import theme from '../../selectors/Theme'
+import { Box } from '@mui/material'
 import Header from '../Header';
 import HomeTabsAll from './HomeTabsAll';
 import HomeTabsNeon from './HomeTabsNeon';

@@ -1,7 +1,5 @@
 // == Import
-import { AppBar, Box, Typography } from '@mui/material'
-import { Link } from 'react-router-dom';
-import theme from '../../../selectors/Theme'
+import {Box} from '@mui/material'
 import AllProduct from './AllProduct';
 import { useSelector } from 'react-redux';
 

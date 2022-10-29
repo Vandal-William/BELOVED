@@ -1,6 +1,5 @@
 // == Import
 import { Box, Typography } from '@mui/material'
-import theme from '../../selectors/Theme'
 import headerImage from '../../asset/header/headerImage.jpeg'
 // == Composant
 function Header() {

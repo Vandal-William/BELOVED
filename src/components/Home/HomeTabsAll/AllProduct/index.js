@@ -7,7 +7,7 @@ function AllProduct({image, name, price, tags, id}) {
  
   return (       
 
-      <Box component={Link} to={`/product/${id}`} sx={{width: '20%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <Box component={Link} to={`/artist/${id}`} sx={{width: '20%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
         <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '30rem'}}>
 
