@@ -8,6 +8,7 @@ import Home from '../Home';
 import OneArtist from '../OneArtist';
 import OneProduct from '../OneProduct';
 import { useSelector } from 'react-redux';
+import Account from '../Account';
 // == Composant
 function App() {
  const web3 = useSelector(state => state.web3)
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/artist/:id' element={<OneArtist />}/>
           <Route path='/product/:id' element={<OneProduct />}/>
+          <Route path='/account' element={<Account />}/>
         </Routes>
         
 

@@ -19,13 +19,16 @@ const wallet = (store) => (next) => (action) => {
         })        
       }
       axios.get(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:${response[0]}`).then((response) => {
-        console.log(response)
+        store.dispatch({
+          type: 'SAVE_NFTS',
+          nfts: response.data.items
+        })
       })
-
+     
       web3.eth.getBalance(response[0]).then((response) => {
         store.dispatch({
           type: 'SAVE_ETHAMOUND',
-          eth: web3.utils.fromWei(response) 
+          eth: web3.utils.fromWei(response)
         })
       })
     }))

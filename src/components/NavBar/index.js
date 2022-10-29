@@ -28,7 +28,7 @@ function NavBar() {
           </Box>
           
           )}
-        {isLogged && <Typography variant='h6' fontWeight='bold' color='white'> Account</Typography>}
+        {isLogged && <Typography component={Link} to='/account' variant='h6' fontWeight='bold' color='white'> Account</Typography>}
         <Typography variant='h6' fontWeight='bold' component={Link} to='/'> Products </Typography>
          {!isLogged && <Button onClick={connectedWalletHandler}> Connect to Metamask</Button>}
       </Box>

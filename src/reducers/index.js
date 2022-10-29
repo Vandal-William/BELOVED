@@ -7,6 +7,7 @@ const initialState = {
   account: null,
   eth: null, 
   networkId: null,
+  nfts: null,
   loggin: false
 
 };
@@ -45,7 +46,12 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         networkId: action.networkId,
-      };       
+      };
+    case 'SAVE_NFTS':
+    return {
+      ...state,
+      nfts: action.nfts,
+    };              
     default:
       return state;
   }
