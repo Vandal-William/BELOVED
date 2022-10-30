@@ -9,6 +9,7 @@ import OneArtist from '../OneArtist';
 import OneProduct from '../OneProduct';
 import { useSelector } from 'react-redux';
 import Account from '../Account';
+import BottomBar from '../BottomBar';
 // == Composant
 function App() {
  const web3 = useSelector(state => state.web3)
@@ -23,7 +24,7 @@ function App() {
           <Route path='/product/:id' element={<OneProduct />}/>
           <Route path='/account' element={<Account />}/>
         </Routes>
-        
+        <BottomBar />
 
     </ThemeProvider>
 

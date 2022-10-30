@@ -1,15 +1,24 @@
 // == Import
 import { Box } from '@mui/material'
+import { styled } from '@mui/system';
 import DarkProduct from './DarkProduct';
 import { useSelector } from 'react-redux';
 // == Composant
 function HomeTabsDark() {
   const data = useSelector(state => state.products)
   const dark = data.filter(darkproduct => darkproduct.type === 'Dark')
-  console.log(data)
+
+  const ProductContainer = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginTop: '3rem',
+      flexWrap: 'wrap'
+    },
+  }));
   return (
    
-   <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2rem'}}>
+   <ProductContainer sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2rem'}}>
      {dark.map(product => (
       <DarkProduct 
         key={product.id}
@@ -20,7 +29,7 @@ function HomeTabsDark() {
         id={product.id}
       />
      ))}
-   </Box>
+   </ProductContainer>
 
   );
 }

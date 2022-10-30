@@ -1,15 +1,25 @@
 // == Import
 import {Box} from '@mui/material'
+import { styled } from '@mui/system';
 import AllProduct from './AllProduct';
 import { useSelector } from 'react-redux';
 
 // == Composant
 function HomeTabsAll() {
   const data = useSelector(state => state.products)
-  console.log(data)
+
+  const ProductContainer = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginTop: '3rem',
+      flexWrap: 'wrap'
+    },
+  }));
+  
   return (
    
-   <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', marginTop: '5rem', marginBottom: '5rem'}}>
+   <ProductContainer sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', marginTop: '5rem', marginBottom: '5rem'}}>
      {data.map(product => (
       <AllProduct 
         key={product.id}
@@ -21,7 +31,7 @@ function HomeTabsAll() {
 
       />
      ))}
-   </Box>
+   </ProductContainer>
 
   );
 }

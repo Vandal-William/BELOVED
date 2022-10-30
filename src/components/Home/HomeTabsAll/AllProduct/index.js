@@ -1,13 +1,25 @@
 // == Import
 import { Box, Chip, Typography } from '@mui/material'
+import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 
 // == Composant
 function AllProduct({image, name, price, tags, id}) {
+
+  const ProductCards = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'sm')]: {
+      marginTop: 0,
+      width: '90%',
+    },
+    [theme.breakpoints.up('md')]: {
+      marginTop: 0,
+      width: '35%',
+    },
+  }));
  
   return (       
 
-      <Box component={Link} to={`/artist/${id}`} sx={{width: '20%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <ProductCards component={Link} to={`/artist/${id}`} sx={{width: '15%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
         <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '30rem'}}>
 
@@ -34,7 +46,7 @@ function AllProduct({image, name, price, tags, id}) {
           </Box>
       
         </Box>
-      </Box>
+      </ProductCards>
            
 
   );

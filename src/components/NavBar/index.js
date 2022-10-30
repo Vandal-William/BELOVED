@@ -1,5 +1,6 @@
 // == Import
 import { AppBar, Box, Button, Typography } from '@mui/material'
+import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
@@ -14,10 +15,22 @@ function NavBar() {
       type: 'CONNECT_WALLET'
     })
   }
+
+  const NavBar = styled(AppBar)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'md')]: {
+      display: 'none'
+    },
+  }));
+
+  const ConnectButton = styled(Button)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'md')]: {
+      display: 'none'
+    },
+  }));
  
   return (
 
-   <AppBar>
+   <NavBar>
       <Typography variant='h3' component={Link} to='/'> BELOVED </Typography>
 
       <Box sx={{display: 'flex', justifyContent: 'start', gap: '3rem', alignItems: 'center'}}>
@@ -30,10 +43,10 @@ function NavBar() {
           )}
         {isLogged && <Typography component={Link} to='/account' variant='h6' fontWeight='bold' color='white'> Account</Typography>}
         <Typography variant='h6' fontWeight='bold' component={Link} to='/'> Products </Typography>
-         {!isLogged && <Button onClick={connectedWalletHandler}> Connect to Metamask</Button>}
+         {!isLogged && <ConnectButton onClick={connectedWalletHandler}> Connect to Metamask</ConnectButton>}
       </Box>
       
-   </AppBar>
+   </NavBar>
 
   );
 }

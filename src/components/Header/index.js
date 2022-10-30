@@ -1,10 +1,40 @@
 // == Import
 import { Box, Typography } from '@mui/material'
+import { styled } from '@mui/system';
 import headerImage from '../../asset/header/headerImage.jpeg'
 // == Composant
 function Header() {
+
+  const HeaderContainer = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'md')]: {
+      height: '35vh',
+      gap: '3rem',
+      justifyContent: 'center',
+      paddingRight: 0,
+      alignItems: 'center',  
+    },
+  }));
+
+  const BrandTypo = styled(Typography)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'md')]: {
+      fontSize: '2rem'
+    },
+  }));
+
+  const BaseLineTypo = styled(Typography)(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'md')]: {
+      fontSize: '0.7rem'
+    },
+  }));
+
+  const ImageHeader = styled('img')(({ theme }) => ({
+    [theme.breakpoints.between('xs', 'md')]: {
+      width: '30%'
+    },
+  }));
+
   return (
-    <Box 
+    <HeaderContainer 
     sx={{
       width: '100%', 
       height: '100vh', 
@@ -18,13 +48,13 @@ function Header() {
       }} 
       >
       <Box>
-        <Typography variant='h1' color='white'> BELOVED </Typography>
-        <Typography variant='h4' color='white' sx={{textAlign: 'center'}}> Love and Be Loved </Typography>
+        <BrandTypo variant='h1' color='white'> BELOVED </BrandTypo>
+        <BaseLineTypo variant='h4' color='white' sx={{textAlign: 'center'}}> Love and Be Loved </BaseLineTypo>
       </Box>  
-      <img src={headerImage} alt='flowerTech' width='25%' />
+      <ImageHeader src={headerImage} alt='flowerTech' width='25%' />
       
 
-    </Box>
+    </HeaderContainer>
 
   );
 }
