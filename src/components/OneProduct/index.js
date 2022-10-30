@@ -51,12 +51,18 @@ function OneProduct() {
     [theme.breakpoints.between('xs', 'sm')]: {
       fontSize: '3rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '6rem'
+    },
  
   }));
   const ProductAuthorName = styled(Box)(({ theme }) => ({
     [theme.breakpoints.between('xs', 'sm')]: {
       marginTop: '1.5rem',
       fontSize: '1.5rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '4rem'
     },
  
   }));

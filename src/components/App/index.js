@@ -10,8 +10,13 @@ import OneProduct from '../OneProduct';
 import { useSelector } from 'react-redux';
 import Account from '../Account';
 import BottomBar from '../BottomBar';
+
 // == Composant
+import useScrollTop from '../../hooks/useScrollTop';
+
 function App() {
+
+  useScrollTop();
  const web3 = useSelector(state => state.web3)
  console.log(web3)
   return (

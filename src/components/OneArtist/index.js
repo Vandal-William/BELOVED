@@ -40,6 +40,9 @@ function OneArtist() {
       fontSize: '2rem',
       marginLeft: '9rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '7rem',
+    },
   }));
 
   const AuthorStory = styled(Box)(({ theme }) => ({
@@ -48,6 +51,14 @@ function OneArtist() {
       fontSize: '1rem',
       marginTop: '3rem'
     },
+    [theme.breakpoints.up('md')]: {
+      paddingTop: '7rem', 
+      paddingBottom: '7rem', 
+      paddingLeft: '20rem', 
+      paddingRight: '20rem', 
+      fontSize: '2rem', 
+      textAlign: 'center'
+    },
   }));
 
   const AuthorCollection = styled(Box)(({ theme }) => ({
@@ -55,6 +66,10 @@ function OneArtist() {
       marginLeft: '2rem',
       fontSize: '2rem',
       marginTop: '3rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      marginLeft: '100px',
+      fontSize: '4rem'
     },
   }));
 

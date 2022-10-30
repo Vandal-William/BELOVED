@@ -13,13 +13,13 @@ function AllProduct({image, name, price, tags, id}) {
     },
     [theme.breakpoints.up('md')]: {
       marginTop: 0,
-      width: '35%',
+      width: '20%',
     },
   }));
  
   return (       
 
-      <ProductCards component={Link} to={`/artist/${id}`} sx={{width: '15%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <ProductCards component={Link} to={`/artist/${id}`} sx={{width: '30%', height: '30rem', backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
         <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '30rem'}}>
 

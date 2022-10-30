@@ -13,7 +13,7 @@ function DarkProduct({image, name, price, tags, id}) {
     },
     [theme.breakpoints.up('md')]: {
       marginTop: 0,
-      width: '35%',
+      width: '20%',
     },
   }));
   return (
