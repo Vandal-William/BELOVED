@@ -1,7 +1,9 @@
 // == Import
 import { Box, Typography } from '@mui/material'
 import { styled } from '@mui/system';
+import { useSelector } from 'react-redux';
 import headerImage from '../../asset/header/headerImage.jpeg'
+
 // == Composant
 function Header() {
 
@@ -33,28 +35,30 @@ function Header() {
     },
   }));
 
-  return (
-    <HeaderContainer 
-    sx={{
-      width: '100%', 
-      height: '100vh', 
-      padding: '1rem', 
-      paddingRight: '20%', 
-      display: 'flex', 
-      justifyContent: 'end', 
-      alignItems: 'center', 
-      backgroundColor: 'black',
-      gap: '10rem'
-      }} 
-      >
-      <Box>
-        <BrandTypo variant='h1' color='white'> BELOVED </BrandTypo>
-        <BaseLineTypo variant='h4' color='white' sx={{textAlign: 'center'}}> Love and Be Loved </BaseLineTypo>
-      </Box>  
-      <ImageHeader src={headerImage} alt='flowerTech' width='25%' />
-      
 
-    </HeaderContainer>
+  return (
+  
+      <HeaderContainer 
+      sx={{
+        width: '100%', 
+        height: '100vh', 
+        padding: '1rem', 
+        paddingRight: '20%', 
+        display: 'flex', 
+        justifyContent: 'end', 
+        alignItems: 'center', 
+        backgroundColor: 'black',
+        gap: '10rem'
+        }} 
+        >
+        <Box>
+          <BrandTypo variant='h1' color='white'> BELOVED </BrandTypo>
+          <BaseLineTypo variant='h4' color='white' sx={{textAlign: 'center'}}> Love and Be Loved </BaseLineTypo>
+        </Box>  
+        <ImageHeader src={headerImage} alt='flowerTech' width='25%' />
+        
+      </HeaderContainer>
+
 
   );
 }

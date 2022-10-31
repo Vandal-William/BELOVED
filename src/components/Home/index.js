@@ -11,7 +11,6 @@ import { useSelector } from 'react-redux';
 // == Composant
 function Home() {
   const tabs = useSelector(state => state.tabs)
-  console.log(tabs)
   return (
     <>
       <Header />

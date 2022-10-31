@@ -6,6 +6,7 @@ import Web3 from "web3";
 const wallet = (store) => (next) => (action) => {
 
   if(action.type === 'CONNECT_WALLET'){
+    console.log('je veut me connecter')
     const web3 = new Web3(Web3.givenProvider)
     store.dispatch({
       type: 'SAVE_WEB3',

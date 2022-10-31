@@ -18,7 +18,6 @@ function App() {
 
   useScrollTop();
  const web3 = useSelector(state => state.web3)
- console.log(web3)
   return (
     <ThemeProvider theme={theme}>
 
