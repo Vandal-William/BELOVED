@@ -9,6 +9,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
     "@mui/styled-engine-sc": "^5.10.6",
+    "@rarible/sdk": "^0.11.0-beta.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -21,6 +22,7 @@
     "ethers": "^5.7.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-arweave-image": "^0.2.1",
     "react-dom": "^18.2.0",
     "react-ipfs-image": "^0.7.0",
     "react-redux": "^8.0.2",
@@ -28,6 +30,7 @@
     "react-scripts": "4.0.3",
     "redux": "^4.2.0",
     "styled-components": "^5.3.6",
+    "tslib": "2.3.1",
     "web-vitals": "^2.1.4",
     "web3": "^1.8.0"
   },
