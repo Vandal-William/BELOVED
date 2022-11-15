@@ -12,7 +12,7 @@ const initialState = {
 
 };
 
-function wallet(state = initialState, action = {}) {
+function connectWallet(state = initialState, action = {}) {
   switch (action.type) {
     case 'CHANGE_VALUE': // pour ajouter un champ controller
       return {
@@ -57,4 +57,4 @@ function wallet(state = initialState, action = {}) {
   }
 }
 
-export default wallet;
+export default connectWallet;
