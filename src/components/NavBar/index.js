@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 // == Composant
 function NavBar() {
-  const isLogged = useSelector(state => state.loggin)
-  const eth = useSelector(state => state.eth)
+  const isLogged = useSelector(state => state.wallet.loggin)
+  const eth = useSelector(state => state.wallet.eth)
   const dispatch = useDispatch()
 
   const connectedWalletHandler = () => {

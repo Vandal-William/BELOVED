@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux'
 import NFT from './NFT'
 // == Composant
 function NFTS() {
-  const nfts = useSelector(state => state.nfts)
+  const nfts = useSelector(state => state.wallet.nfts)
   return (
-      <Box sx={{marginTop: '10rem', display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+      <Box sx={{marginTop: '10rem', display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', marginBottom: '5rem' }}>
        <Typography variant='h4' color='white' sx={{marginTop: '5rem', marginLeft: '5rem'}}>NFTS</Typography>
       {nfts.map(nft => (
        <NFT 

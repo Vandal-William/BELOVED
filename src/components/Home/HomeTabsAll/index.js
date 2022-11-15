@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 // == Composant
 function HomeTabsAll() {
-  const data = useSelector(state => state.products)
+  const data = useSelector(state => state.wallet.products)
 
   const ProductContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.between('xs', 'sm')]: {

@@ -5,7 +5,7 @@ import DarkProduct from './DarkProduct';
 import { useSelector } from 'react-redux';
 // == Composant
 function HomeTabsDark() {
-  const data = useSelector(state => state.products)
+  const data = useSelector(state => state.wallet.products)
   const dark = data.filter(darkproduct => darkproduct.type === 'Dark')
 
   const ProductContainer = styled(Box)(({ theme }) => ({

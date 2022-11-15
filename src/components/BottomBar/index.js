@@ -11,8 +11,8 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Typography } from '@mui/material';
 
 function BottomBar() {
-  const eth = useSelector(state => state.eth)
-  const isLogged = useSelector(state => state.loggin)
+  const eth = useSelector(state => state.wallet.eth)
+  const isLogged = useSelector(state => state.wallet.loggin)
   const dispatch = useDispatch()
   const [value, setValue] = React.useState(0);
 

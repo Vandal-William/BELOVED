@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 // == Composant
 function Home() {
-  const tabs = useSelector(state => state.tabs)
+  const tabs = useSelector(state => state.wallet.tabs)
   return (
     <>
       <Header />

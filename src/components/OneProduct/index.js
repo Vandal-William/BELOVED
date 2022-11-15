@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 // == Composant
 function OneProduct() {
-  const data = useSelector(state => state.products)
+  const data = useSelector(state => state.wallet.products)
   const params = useParams()
   const products = data.find(product => { 
     if(product.id === parseInt(params.id)){

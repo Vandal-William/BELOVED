@@ -5,7 +5,7 @@ import TechProduct from './TechProduct';
 import { useSelector } from 'react-redux';
 // == Composant
 function HomeTabsVintage() {
-  const data = useSelector(state => state.products)
+  const data = useSelector(state => state.wallet.products)
   const tech = data.filter(techproduct => techproduct.type === 'Modern-Tech')
  
   const ProductContainer = styled(Box)(({ theme }) => ({

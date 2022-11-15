@@ -7,17 +7,17 @@ import NavBar from '../NavBar';
 import Home from '../Home';
 import OneArtist from '../OneArtist';
 import OneProduct from '../OneProduct';
-import { useSelector } from 'react-redux';
 import Account from '../Account';
 import BottomBar from '../BottomBar';
 
 // == Composant
 import useScrollTop from '../../hooks/useScrollTop';
+import MintNft from '../MintNft';
 
 function App() {
 
   useScrollTop();
- const web3 = useSelector(state => state.web3)
+ 
   return (
     <ThemeProvider theme={theme}>
 
@@ -27,6 +27,7 @@ function App() {
           <Route path='/artist/:id' element={<OneArtist />}/>
           <Route path='/product/:id' element={<OneProduct />}/>
           <Route path='/account' element={<Account />}/>
+          <Route path='/mint' element={<MintNft />}/>
         </Routes>
         <BottomBar />
 

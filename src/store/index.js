@@ -2,7 +2,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import reducer from "../reducers";
 
-import debug from '../middlewares/debug';
+// import debug from '../middlewares/debug';
 import wallet from '../middlewares/wallet';
 
 const middlewares = applyMiddleware(wallet);

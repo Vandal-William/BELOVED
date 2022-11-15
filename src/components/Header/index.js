@@ -1,7 +1,6 @@
 // == Import
 import { Box, Typography } from '@mui/material'
 import { styled } from '@mui/system';
-import { useSelector } from 'react-redux';
 import headerImage from '../../asset/header/headerImage.jpeg'
 
 // == Composant

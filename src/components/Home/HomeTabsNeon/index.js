@@ -5,7 +5,7 @@ import NeonProduct from './NeonProduct';
 import { useSelector } from 'react-redux';
 // == Composant
 function HomeTabsNeon() {
-  const data = useSelector(state => state.products)
+  const data = useSelector(state => state.wallet.products)
   const neon = data.filter(neonproduct => neonproduct.type === 'Neon')
 
   const ProductContainer = styled(Box)(({ theme }) => ({

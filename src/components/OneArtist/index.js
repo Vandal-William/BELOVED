@@ -7,7 +7,7 @@ import OneNft from '../OneNft';
 
 // == Composant
 function OneArtist() {
-  const data = useSelector(state => state.products)
+  const data = useSelector(state => state.wallet.products)
   const params = useParams()
   const products = data.find(product => { 
     if(product.id === parseInt(params.id)){
