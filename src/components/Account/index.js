@@ -1,15 +1,13 @@
 // == Import
 import {  Box, Button, Typography } from '@mui/material'
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import NFTS from './NFTS';
 // == Composant
 function Account() {
   const account = useSelector(state => state.wallet.account)
   const network = useSelector(state => state.wallet.networkId)
 
-  const handleCreate = () => {
-    console.log('coucou')
-  }
 
   const handleEdit = () => {
 
@@ -18,9 +16,9 @@ function Account() {
   return (
 
       <Box sx={{marginTop: '15rem', display: 'flex', flexDirection: 'column'}}>
-
+ 
       <Box sx={{alignSelf: 'center', width: '85%', marginBottom: '5rem', display: 'flex', gap: '2rem'}}>
-        <Button onClick={handleCreate}  sx={{ width: '10%', cursor: 'pointer'}}> Create NFT</Button>
+        <Button component={Link} to='/mint' sx={{ width: '10%', cursor: 'pointer'}}> Create NFT</Button>
         <Button onClick={handleEdit}  sx={{ width: '10%', cursor: 'pointer'}}> Edit profil</Button>
       </Box>
 

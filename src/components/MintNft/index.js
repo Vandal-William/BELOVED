@@ -6,22 +6,48 @@ import Input from '../Input'
 
 // == Composant
 function MintNft() {
+  const dispatch = useDispatch()
+  
+  const handleChange = (e) => {
 
+    dispatch({
+      type: 'SHOW_IMAGE',
+      image : URL.createObjectURL(e.target.files[0]),
+      original_image: e.target.value
+      
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch({
+      type: 'MINT_NFT',
+      original_image: original_image,
+      name: name,
+      description: description
+
+    })
+  }
+  
   const image = useSelector(state => state.mint.image)
-  console.log(image)
+  const original_image = useSelector(state => state.mint.original_image)
+  const name = useSelector(state => state.mint.name)
+  const description = useSelector(state => state.mint.description)
+  
   
   return (
-  <Container component='form' sx={{bgcolor: 'lightgray', padding: '2rem', marginTop: '10rem', display: 'flex', flexDirection: 'column'}}> 
+
+  <Container onSubmit={handleSubmit} component='form' sx={{bgcolor: 'lightgray', padding: '2rem', marginTop: '10rem', display: 'flex', flexDirection: 'column', marginBottom: '2rem'}}> 
 
     <Typography variant='h3' sx={{marginBottom: '2rem'}}>Create NFT</Typography>
 
     <Box sx={{display: 'flex', gap: '1rem'}}>
-      <img src={image} alt='Nft' style={{border: '0.1rem solid black', width: '100%', height: '20rem'}}/>
-      <Input 
+      <img src={image} alt='Nft' style={{width: '40%', height: '30rem'}}/>
+      <input 
         type='file'
         accept='.png, .jpg, .jpeg'
-        name='image'
-        sx={{alignSelf: 'end', border: 'none'}}
+        onChange={handleChange}
+        style={{alignSelf: 'end', border: 'none'}}
       />
     </Box>
 
@@ -31,17 +57,19 @@ function MintNft() {
         name='name'
         label='name'
         sx={{width: '50%'}}
+        
       />
 
        <Input 
         name='description'
         label='description'
         rows='50'
+     
       />
 
     </Box>
-   
-    <Button sx={{marginTop: '2rem', width: '20%', alignSelf: 'end'}}>Mint NFT</Button>
+  
+    <Button type='submit' sx={{marginTop: '2rem', width: '20%', alignSelf: 'end'}}>Mint NFT</Button>
 
   
   </Container>    
