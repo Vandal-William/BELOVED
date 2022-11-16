@@ -8,13 +8,12 @@ const instance = axios.create({
 const mint = (store) => (next) => (action) => {
    if (action.type === 'MINT_NFT') {
     const state = store.getState();
-    instance.post('/jsonipfs', {
-
-        original_image: state.mint.original_image.slice(12),
-        name: state.mint.name,
-        description: state.mint.description,
-
-    })
+    const formData = new FormData();
+    
+    formData.append("name", state.mint.name)
+    formData.append("file", state.mint.original_image)
+    formData.append("description", state.mint.description)
+    instance.post('/jsonipfs', formData)
     .then((response) => {
         console.log(response)
     })

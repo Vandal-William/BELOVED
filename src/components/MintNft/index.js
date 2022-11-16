@@ -9,11 +9,10 @@ function MintNft() {
   const dispatch = useDispatch()
   
   const handleChange = (e) => {
-
     dispatch({
       type: 'SHOW_IMAGE',
       image : URL.createObjectURL(e.target.files[0]),
-      original_image: e.target.value
+      original_image: e.target.files[0],
       
     })
   }
@@ -37,7 +36,17 @@ function MintNft() {
   
   return (
 
-  <Container onSubmit={handleSubmit} component='form' sx={{bgcolor: 'lightgray', padding: '2rem', marginTop: '10rem', display: 'flex', flexDirection: 'column', marginBottom: '2rem'}}> 
+  <form 
+    onSubmit={handleSubmit} 
+    enctype="multipart/form-data"
+    style={{
+      backgroundColor: 'lightgray', 
+      padding: '2rem',  
+      margin: '10rem auto 2rem auto',
+      display: 'flex', 
+      flexDirection: 'column', 
+      width: '75%'
+    }}> 
 
     <Typography variant='h3' sx={{marginBottom: '2rem'}}>Create NFT</Typography>
 
@@ -48,6 +57,7 @@ function MintNft() {
         accept='.png, .jpg, .jpeg'
         onChange={handleChange}
         style={{alignSelf: 'end', border: 'none'}}
+        name='file'
       />
     </Box>
 
@@ -72,7 +82,7 @@ function MintNft() {
     <Button type='submit' sx={{marginTop: '2rem', width: '20%', alignSelf: 'end'}}>Mint NFT</Button>
 
   
-  </Container>    
+  </form>    
 
   );
 }
